@@ -4,7 +4,7 @@ import torch.optim as optim
 import argparse
 
 from dataloader.dataloader_moving_mnist import load_data as load_moving_mnist
-from model_MamEP import MambaEarthPred_model
+from MambaEP import MambaEarthPred_model
 from tools.check import check_device
 from tools.train_function import train_model, test_model
 from parameters import get_args
