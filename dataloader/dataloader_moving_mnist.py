@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 from torchvision import datasets, transforms
 
 
-def load_mnist(root = "E:\dataset"):
+def load_mnist(root):
     # Load MNIST dataset for generating training data.
     path = os.path.join(root, 'moving_mnist/train-images-idx3-ubyte.gz')
     with gzip.open(path, 'rb') as f:
@@ -17,7 +17,7 @@ def load_mnist(root = "E:\dataset"):
     return mnist
 
 
-def load_fixed_set(root = "E:/dataset/"):
+def load_fixed_set(root):
     # Load the fixed dataset
     filename = 'moving_mnist/mnist_test_seq.npy'
     path = os.path.join(root, filename)
@@ -150,8 +150,8 @@ class MovingMNIST(Dataset):
 
 
 def load_data(
-    batch_size = 1, val_batch_size = 1,
-    num_workers = 0, data_root="/userhome/cs2/wang1210/dataset"):
+    data_root, batch_size = 1, val_batch_size = 1,
+    num_workers = 0):
 
     # Create the full dataset
     full_dataset = MovingMNIST(root=data_root, is_train=True,
@@ -181,6 +181,7 @@ def load_data(
 if __name__ == '__main__':
     batch_size = validation_batch_size = 1
     dataloader_train, dataloader_validation, dataloader_test, mean, std = load_data(
+        data_root="dataset",
         batch_size= batch_size, val_batch_size=validation_batch_size, num_workers=0)
 
     print(len(dataloader_train))

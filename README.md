@@ -8,7 +8,7 @@ Spatio-temporal forecasting plays a vital role in a range of scientific and prac
 </p>
 
 ## Getting Started
-1. Install Python 3.8. For convenience, execute the following command.
+1. Install Python 3.10. For convenience, execute the following command.
 
 ```bash
 pip install -r requirements.txt
@@ -23,9 +23,9 @@ pip install -r requirements.txt
 |   RainNet    | Predict future natural representation | Natural Scene |    [[Github Link]](https://github.com/neuralchen/RainNet)    |
 | Moving MNIST |         Predict future image          | Synthetic | [[Link]](https://www.cs.toronto.edu/~nitish/unsupervised_video/) |
 
-3. Use the following instructions to quickly run the code.
+3. Use the following instructions to quickly run the code. (Using Moving MNIST as a demonstration example)
 
 ```python
-python train_main.py --data_path Dataset/NavierStokes_V1e-5_N1200_T20.mat --num_epochs 100 --batch_size 5
+python main.py --data_path dataset --num_epochs 100 --batch_size 4 --val_batch_size 4 --lr 0.001
 ```
 

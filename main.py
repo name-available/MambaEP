@@ -12,7 +12,8 @@ from parameters import get_args
 def main(args):
     train_loader, eval_loader, test_loader, _, _ = load_moving_mnist(
         batch_size = args.batch_size,
-        val_batch_size = args.batch_size
+        val_batch_size = args.val_batch_size,
+        data_root=args.data_path
     )
 
     model = MambaEarthPred_model(shape_in=(10, 1, 64, 64))
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser('Training and evaluation parameters', add_help=False)
 
     # input parameters
-    parser.add_argument('--data_path', type=str, default='/userhome/cs2/wang1210/dataset', help='Path of dataset.')
+    parser.add_argument('--data_path', type=str, default='dataset', help='Path of dataset.')
     parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training.')
     parser.add_argument('--val_batch_size', type=int, default=4, help='Batch size for validation.')
 
@@ -51,8 +52,8 @@ if __name__ == "__main__":
 
     # logging parameters
     parser.add_argument('--log_per_samples', type=int, default=500, help='Evaluate every n epochs.')
-    parser.add_argument('--log_path', type=str, default="logs/ablation_full.log", help='The path of logging file.')
-    parser.add_argument('--checkpoints', type=str, default="checkpoints/mamep_mm.pth", help='Trained model checkpoints.')
+    parser.add_argument('--log_path', type=str, default="logs/log.log", help='The path of logging file.')
+    parser.add_argument('--checkpoints', type=str, default="checkpoints/checkpoint.pth", help='Trained model checkpoints.')
 
     args = parser.parse_args()
     main(args)

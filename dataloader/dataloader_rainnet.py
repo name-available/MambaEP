@@ -45,7 +45,7 @@ class TemperatureDataset(Dataset):
         return input_img, output_img
 
 
-def load_data(mixed = False, root = '/userhome/cs2/wang1210/dataset/temperature/temperature', batch_size = 8):
+def load_data(root, mixed = False, batch_size = 8):
     train_path = os.path.join(root, 'trn.pkl')
     test_path = os.path.join(root, 'test.pkl')
     val_path = os.path.join(root, 'val.pkl')
@@ -76,10 +76,7 @@ def load_data(mixed = False, root = '/userhome/cs2/wang1210/dataset/temperature/
     mean, std = 0, 1
     return train_set, val_set, test_set, mean, std
 
-def load_position_info(root = '/userhome/cs2/wang1210/dataset/temperature/temperature'):
-    
-
-def load_pkl(root='/userhome/cs2/wang1210/dataset/temperature/temperature'):
+def load_pkl(root):
     train_path = os.path.join(root, 'trn.pkl')
     test_path = os.path.join(root, 'test.pkl')
     val_path = os.path.join(root, 'val.pkl')

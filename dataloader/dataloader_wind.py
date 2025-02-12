@@ -45,7 +45,7 @@ class WindDataset(Dataset):
         return input_img, output_img
 
 
-def load_data(mixed = False, root = '/userhome/cs2/wang1210/dataset/component_of_wind/component_of_wind', batch_size = 8):
+def load_data(mixed = False, root = 'dataset/component_of_wind/component_of_wind', batch_size = 8):
     train_path = os.path.join(root, 'trn.pkl')
     test_path = os.path.join(root, 'test.pkl')
     val_path = os.path.join(root, 'val.pkl')
@@ -76,13 +76,13 @@ def load_data(mixed = False, root = '/userhome/cs2/wang1210/dataset/component_of
     mean, std = 0, 1
     return train_set, val_set, test_set, mean, std
 
-def load_position_info(root = '/userhome/cs2/wang1210/dataset/component_of_wind/component_of_wind'):
+def load_position_info(root = 'dataset/component_of_wind/component_of_wind'):
     position_path = os.path.join(root, 'position.pkl')
     with open(position_path, 'rb') as file:
         position_info = pickle.load(file)
     return position_info
 
-def load_pkl(root='/userhome/cs2/wang1210/dataset/component_of_wind/component_of_wind'):
+def load_pkl(root='dataset/component_of_wind/component_of_wind'):
     train_path = os.path.join(root, 'trn.pkl')
     test_path = os.path.join(root, 'test.pkl')
     val_path = os.path.join(root, 'val.pkl')
@@ -101,7 +101,7 @@ def load_pkl(root='/userhome/cs2/wang1210/dataset/component_of_wind/component_of
     print(val_set['context'].shape)
 
 def check_shape():
-    data_root = "/userhome/cs2/wang1210/dataset/component_of_wind/component_of_wind"
+    data_root = "dataset/component_of_wind/component_of_wind"
     train_path = os.path.join(data_root, 'trn.pkl')
     with open(train_path, 'rb') as file:
         train_data = pickle.load(file)

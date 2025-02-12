@@ -31,8 +31,7 @@ class VilDataset(Dataset):
         return input_img, output_img
 
 
-def load_data(batch_size, num_workers = 0, 
-              data_root = "/userhome/cs2/wang1210/dataset/Sevir"):
+def load_data(data_root, batch_size, num_workers = 0):
     data = np.load(f'{data_root}/SEVIR_ir069.npy', mmap_mode='r')
 
     train_data, temp_data = train_test_split(data, test_size=0.3, random_state=42)
@@ -57,10 +56,11 @@ def load_data(batch_size, num_workers = 0,
 def img_show():
     batch_size = 1
     num_workers = 0
-    data_root = "/userhome/cs2/wang1210/dataset/Sevir"
+    data_root = "dataset/Sevir"
 
     dataloader_train, dataloader_validation, dataloader_test, mean, std = load_data(
-        batch_size=batch_size, data_root=data_root, num_workers=num_workers
+        data_root=data_root,
+        batch_size=batch_size, num_workers=num_workers
     )
 
     data_iter = iter(dataloader_test)
@@ -90,7 +90,7 @@ def img_show():
 def check_shape():
     batch_size = 1
     num_workers = 0
-    data_root = "/userhome/cs2/wang1210/dataset/Sevir"
+    data_root = "dataset/Sevir"
 
     dataloader_train, dataloader_validation, dataloader_test, mean, std = load_data(
         batch_size = batch_size, data_root = data_root, num_workers = num_workers
