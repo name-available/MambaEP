@@ -1,6 +1,13 @@
 # MambaEP: Efficient Spatio-Temporal Forecasting with Mamba Block and Fourier-Enhanced Temporal Modeling
 
+<p align="center">
+  <a href="https://github.com/name-available/MambaEP/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-yellow" alt="PRs"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-red.svg" alt="Liscence"></a>
+  <img src="https://img.shields.io/github/stars/name-available/MambaEP?color=yellow&label=Star" alt="Stars" >
+</p>
+
 ## Abstract
+
 Spatio-temporal forecasting plays a vital role in a range of scientific and practical applications, from weather prediction to traffic forecasting. However, existing models often struggle with balancing accuracy, efficiency, and scalability. This paper presents MambaEP, an efficient framework for spatio-temporal forecasting that integrates the Mamba Block with Fourier-enhanced temporal modeling. By combining local and global spatial feature extraction with multi-scale temporal processing, MambaEP achieves superior prediction accuracy while maintaining computational efficiency. Extensive experiments on benchmark datasets, including SEVIR, RainNet, and MovingMNIST, demonstrate that MambaEP outperforms state-of-the-art methods in both accuracy and efficiency, achieving faster convergence and smaller model sizes. Our model's ability to efficiently handle long-range dependencies, identify extreme cases, and reduce computational costs positions it as a promising solution for spatio-temporal forecasting tasks.
 
 <p align="center" width="100%">
