@@ -2,7 +2,6 @@
 
 <p align="center">
   <a href="https://github.com/name-available/MambaEP/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-yellow" alt="PRs"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-red.svg" alt="Liscence"></a>
   <img src="https://img.shields.io/github/stars/name-available/MambaEP?color=yellow&label=Star" alt="Stars" >
 </p>
 
