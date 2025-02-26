@@ -14,7 +14,6 @@ Spatio-temporal forecasting plays a vital role in a range of scientific and prac
 </p>
 
 
-
 ## Main Result
 
 Figure below present the evaluation outcomes of MambaEP alongside ten state-of-the-art (SOTA) baselines across six datasets. On the Moving MNIST dataset, MambaEP achieves the lowest MSE (scaled by 100), outperforming prominent methods such as EarthFarsser, Earthformer, and SimVP. Similarly, on the Component of Wind dataset, MambaEP achieves the lowest MSE and MAE scores, demonstrating superior accuracy compared to other approaches. Overall, MambaEP attains the best average performance ranking of 2.09, highlighting its consistent effectiveness across all datasets. These results validate the model's ability to capture and model spatial features effectively through the integration of the Mamba Block.
